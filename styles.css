@@ -1,0 +1,100 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #034078;
+  font-family: "Merriweather", serif;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+/* NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR */
+
+.nav-content {
+  width: 100%;
+  background-color: #034078;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  position: fixed;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-right: 4rem;
+}
+
+.nav-menu a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  overflow: hidden;
+  border: 1px solid white;
+  border-radius: 2px;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+}
+
+.nav-menu a:hover {
+  background-color: #1282a2;
+}
+
+/*shining animation*/
+.nav-menu a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: left 0.4s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.nav-menu a:hover::before {
+  left: 125%;
+}
+
+#nav1,
+#nav2,
+#nav3,
+#nav4,
+#nav5 {
+  position: relative;
+  top:-800px;
+  opacity: 0%;
+  animation-name: drop-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  box-shadow: rgb(255, 255, 255)1px -1px 0px 0px;
+}
+
+#nav1 { animation-delay: 0.6s; }
+#nav2 { animation-delay: 0.45s; }
+#nav3 { animation-delay: 0.3s; }
+#nav4 { animation-delay: 0.15s; }
+#nav5 { animation-delay: 0s; }
+
+@keyframes drop-in {
+  to {
+    top: 0px;
+    opacity: 100%;
+  }
+}
+
+
+/* BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY  */
+
