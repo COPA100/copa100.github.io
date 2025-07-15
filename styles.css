@@ -47,36 +47,29 @@ body {
   font-weight: 500;
   overflow: hidden;
   text-transform: uppercase;
-  transition: 0.1s ease-in-out;
-  transition: .3s;
+  transition: .3s ease;
 }
 
 .nav-menu a:hover {
-  color: #1282A2;
+  transform: translateY(-1px);
 }
 
-/* shining animation 
-
-.nav-menu a:hover {
-  background-color: #1283a22c;
+.nav-menu a::after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    left:5%;
+    bottom:-1px;
+    width: 90%;
+    transform: scaleX(0);
+    background: linear-gradient(50deg, #001F54,#034078);
+    transition: transform .2s ease;
+    color: #e9ecef;
 }
 
-.nav-menu a::before {
-  content:"";
-  position: absolute;
-  top:0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,.1),transparent);
-  transition: 0.65s;
+.nav-menu a:hover::after {
+    transform: scaleX(1);
 }
-
-.nav-menu a:hover::before {
-  left:100%;
-}
-
-*/
 
 #nav1,
 #nav2,
@@ -87,7 +80,6 @@ body {
   animation-name: drop-in;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  box-shadow: rgb(3, 64, 120)2px 2px 0px 0px;
 }
 
 #nav1 { animation-delay: 0.6s; }
@@ -138,12 +130,19 @@ p {
   border: 3px solid #034078;
   opacity: 0;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  transition: 0.3s ease;
+  transition: box-shadow 0.5s ease;
 }
 
-.pfp img:hover{
-  box-shadow: 0 10px 20px rgba(0,0,0,0);
-  filter:grayscale(50%);
+.pfp a {
+  transition: transform 0.5s ease;
+}
+
+.pfp img:hover {
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.pfp a:hover{
+  transform:translateY(-3px);
 }
 
 .pfp {
