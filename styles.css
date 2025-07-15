@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background: linear-gradient(45deg,#001F54,#0A1128);
+  background: linear-gradient(45deg, #001f54, #0a1128);
   font-family: "Merriweather", serif;
   margin-left: 0px;
   margin-top: 0px;
@@ -26,7 +26,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 2vh;
   position: fixed;
-  top:0;
+  top: 0;
   justify-content: flex-end;
   align-content: center;
 }
@@ -42,12 +42,12 @@ body {
   position: relative;
   display: inline-block;
   padding: 3px 10px;
-  color: #FEFCFB;
+  color: #fefcfb;
   text-decoration: none;
   font-weight: 500;
   overflow: hidden;
   text-transform: uppercase;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .nav-menu a:hover {
@@ -55,20 +55,20 @@ body {
 }
 
 .nav-menu a::after {
-    position: absolute;
-    content: '';
-    height: 3px;
-    left:5%;
-    bottom:-1px;
-    width: 90%;
-    transform: scaleX(0);
-    background: linear-gradient(50deg, #001F54,#034078);
-    transition: transform .2s ease;
-    color: #e9ecef;
+  position: absolute;
+  content: "";
+  height: 3px;
+  left: 5%;
+  bottom: -1px;
+  width: 90%;
+  transform: scaleX(0);
+  background: linear-gradient(50deg, #001f54, #034078);
+  transition: transform 0.2s ease;
+  color: #e9ecef;
 }
 
 .nav-menu a:hover::after {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 #nav1,
@@ -76,17 +76,27 @@ body {
 #nav3,
 #nav4,
 #nav5 {
-  top:-20rem;
+  top: -20rem;
   animation-name: drop-in;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 
-#nav1 { animation-delay: 0.6s; }
-#nav2 { animation-delay: 0.45s; }
-#nav3 { animation-delay: 0.3s; }
-#nav4 { animation-delay: 0.15s; }
-#nav5 { animation-delay: 0s; }
+#nav1 {
+  animation-delay: 0.6s;
+}
+#nav2 {
+  animation-delay: 0.45s;
+}
+#nav3 {
+  animation-delay: 0.3s;
+}
+#nav4 {
+  animation-delay: 0.15s;
+}
+#nav5 {
+  animation-delay: 0s;
+}
 
 @keyframes drop-in {
   to {
@@ -97,7 +107,7 @@ body {
 /* BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY  */
 
 h1 {
-  color: #FEFCFB;
+  color: #fefcfb;
   font-size: 10vh;
   text-wrap: nowrap;
   margin: 0;
@@ -105,7 +115,7 @@ h1 {
 }
 
 p {
-  color: #FEFCFB;
+  color: #fefcfb;
 
   margin-top: 10px;
   margin-bottom: 5px;
@@ -124,12 +134,12 @@ p {
   opacity: 0;
 }
 
-.pfp img{
+.pfp img {
   border-radius: 50%;
-  height:33.3vh;
+  height: 33.3vh;
   border: 3px solid #034078;
   opacity: 0;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.5s ease;
 }
 
@@ -138,11 +148,11 @@ p {
 }
 
 .pfp img:hover {
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
-.pfp a:hover{
-  transform:translateY(-3px);
+.pfp a:hover {
+  transform: translateY(-3px);
 }
 
 .pfp {
@@ -168,8 +178,10 @@ p {
   justify-content: center;
 }
 
-#about > div.about-wrapper > div.about-title > h1, #about > div.about-wrapper > div.about-text > p, .pfp img {
-  animation-name:fade-in;
+#about > div.about-wrapper > div.about-title > h1,
+#about > div.about-wrapper > div.about-text > p,
+.pfp img {
+  animation-name: fade-in;
   animation-duration: 2s;
   animation-delay: 1.7s;
   animation-fill-mode: forwards;
@@ -190,12 +202,12 @@ p {
   scroll-snap-align: start;
   display: grid;
   grid-template-rows: 1fr 2fr 1fr;
-  grid-template-columns: 1fr 0.5fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 50px 0.3fr 20px 0.3fr 1fr;
 }
 
 .skills-text {
   grid-row: 2;
-  grid-column: 3;
+  grid-column: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -210,15 +222,27 @@ p {
 .skills-icons {
   display: flex;
   flex-direction: column;
-  gap:20px;
-  grid-row: 2;
-  grid-column: 2;
+  gap: 30px;
   align-items: center;
   justify-content: center;
 }
 
+.skills-icons-left {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+.skills-icons-right {
+  grid-row: 2;
+  grid-column: 6;
+}
+
 .skills-icons > img {
-  width: 8vh;
+  width: 9vh;
+}
+
+#bootstrap-icon {
+  width: 10.5vh;
 }
 
 #experience {
