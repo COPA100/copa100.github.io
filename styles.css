@@ -32,6 +32,31 @@ body {
   }
 }
 
+h1 {
+  color: #fefcfb;
+  font-size: 10vh;
+  text-wrap: nowrap;
+  margin: 0;
+  line-height: 1.1;
+}
+
+h2 {
+  color: #fefcfb;
+  font-size: 2vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 0;
+}
+
+p {
+  color: #fefcfb;
+
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 2vh;
+  font-family: "Montserrat", sans-serif;
+}
+
 .main-container {
   display: grid;
   grid-template-rows: repeat(5, 100vh);
@@ -125,24 +150,7 @@ body {
   }
 }
 
-/* BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY  */
-
-h1 {
-  color: #fefcfb;
-  font-size: 10vh;
-  text-wrap: nowrap;
-  margin: 0;
-  line-height: 1.1;
-}
-
-p {
-  color: #fefcfb;
-
-  margin-top: 10px;
-  margin-bottom: 5px;
-  font-size: 2vh;
-  font-family: "Montserrat", sans-serif;
-}
+/* ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT */
 
 #about > div.about-wrapper > div.about-title > h1 {
   border-bottom: 2px solid #034078;
@@ -157,7 +165,7 @@ p {
 
 .pfp img {
   border-radius: 50%;
-  height: auto;
+  height: 35vh;
   border: 3px solid #034078;
   opacity: 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -219,6 +227,7 @@ p {
   }
 }
 
+/* SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS */
 #skills {
   scroll-snap-align: start;
   display: grid;
@@ -280,16 +289,17 @@ p {
   width: 8vh;
 }
 
+/* EXPERIENCE EXPERIENCE EXPERIENCE EXPERIENCE EXPERIENCE EXPERIENCE EXPERIENCE EXPERIENCE */
 #experience {
   scroll-snap-align: start;
   display: grid;
-  grid-template-rows: 1.5fr 0.3fr 1fr 0.2fr 1fr 1fr;
-  grid-template-columns: 1fr 2.6fr 1fr;
+  grid-template-rows: 1.5fr 0.3fr 1fr 20px 0.2fr 1fr 1fr;
+  grid-template-columns: 1fr 30px 2.6fr 1fr;
 }
 
 .uva-title-wrapper {
   grid-row: 2;
-  grid-column: 2;
+  grid-column: 3;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -297,6 +307,16 @@ p {
 
 #experience > div.uva-title-wrapper > div.uva-year > h2 {
   margin-top: 20%;
+}
+
+.left-white-line {
+  background-color: white;
+  width: 1px;
+  grid-area: 2 / 1 / 6 / 1;
+  height: 85%;
+  display: flex;
+  justify-self: flex-end;
+  align-self: center;
 }
 
 #experience h1 {
@@ -309,32 +329,24 @@ p {
   letter-spacing: 1px;
 }
 
-#experience h2 {
-  color: #fefcfb;
-  font-size: 2vh;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  line-height: 0;
-}
-
 .uva-body-wrapper {
   grid-row: 3;
-  grid-column: 2;
+  grid-column: 3;
   display: flex;
   flex-direction: column;
 }
 
 .relevant-experience {
-  grid-row: 4;
-  grid-column: 2;
+  grid-row: 5;
+  grid-column: 3;
   display: flex;
   align-self: center;
   margin-top: 10px;
 }
 
 .relevant-experience-body {
-  grid-row: 5;
-  grid-column: 2;
+  grid-row: 6;
+  grid-column: 3;
 }
 
 .bigger {
@@ -345,10 +357,92 @@ p {
   width: 50vh;
 }
 
+/* PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS */
 #projects {
   scroll-snap-align: start;
+  display: grid;
+  grid-template-rows: 0.5fr 2fr 2fr 0.5fr;
+  grid-template-columns: 1fr 4fr 1fr;
+  overflow: hidden;
 }
 
+.projects-container {
+  grid-row: 2;
+  grid-column: 2;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.projects-container2 {
+  grid-row: 3;
+  grid-column: 2;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card {
+  flex: 1 1 auto;
+  min-width: 100px;
+  height: 35vh;
+  background-color: #001f54;
+  border: 2px solid #034078;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT */
 #contact {
   scroll-snap-align: start;
+  display: grid;
+  grid-template-rows: 1fr 0.6fr 0.3fr 1fr;
+  grid-template-columns: 1fr 2.6fr 1fr;
+}
+
+#contact img {
+  transition: transform 0.3s ease;
+}
+
+#contact img:hover {
+  transform: scale(1.05);
+}
+
+.gmail-link {
+  grid-row: 2;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.gmail-link img {
+  width: 25vh;
+}
+
+.gmail-link h2 {
+  font-size: 1.7vh;
+}
+
+.social-links {
+  grid-row: 3;
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  gap: 5vh;
+  align-items: center;
+}
+
+.social-links img {
+  width: 6vh;
 }
