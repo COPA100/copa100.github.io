@@ -5,24 +5,31 @@ html {
 }
 
 body {
-  background: linear-gradient(60deg, #0A1128,#001F54,#0A1128,#001F54,#0A1128);
-  background-size:400% 400%;
+  background: linear-gradient(
+    60deg,
+    #0a1128,
+    #001f54,
+    #0a1128,
+    #001f54,
+    #0a1128
+  );
+  background-size: 400% 400%;
   font-family: "Merriweather", serif;
   margin-left: 0px;
   margin-top: 0px;
-  animation: gradient 20s ease infinite;
+  animation: gradient 30s infinite;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .main-container {
@@ -150,7 +157,7 @@ p {
 
 .pfp img {
   border-radius: 50%;
-  height: 33.3vh;
+  height: auto;
   border: 3px solid #034078;
   opacity: 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -233,6 +240,16 @@ p {
   align-self: flex-start;
 }
 
+#skills .white-line {
+  width: 2px;
+  height: auto;
+  background-color: white;
+  grid-row: 2;
+  grid-column: 5;
+  display: flex;
+  justify-self: center;
+}
+
 .skills-icons {
   display: flex;
   flex-direction: column;
@@ -259,8 +276,73 @@ p {
   width: 10.5vh;
 }
 
+#js-icon {
+  width: 8vh;
+}
+
 #experience {
   scroll-snap-align: start;
+  display: grid;
+  grid-template-rows: 1.5fr 0.3fr 1fr 0.2fr 1fr 1fr;
+  grid-template-columns: 1fr 2.6fr 1fr;
+}
+
+.uva-title-wrapper {
+  grid-row: 2;
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#experience > div.uva-title-wrapper > div.uva-year > h2 {
+  margin-top: 20%;
+}
+
+#experience h1 {
+  font-family: "adobe-caslon-pro", serif;
+  font-weight: lighter;
+  font-size: 2.5vh;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+#experience h2 {
+  color: #fefcfb;
+  font-size: 2vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 0;
+}
+
+.uva-body-wrapper {
+  grid-row: 3;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.relevant-experience {
+  grid-row: 4;
+  grid-column: 2;
+  display: flex;
+  align-self: center;
+  margin-top: 10px;
+}
+
+.relevant-experience-body {
+  grid-row: 5;
+  grid-column: 2;
+}
+
+.bigger {
+  font-size: 3vh;
+}
+
+.uva-icon > img {
+  width: 50vh;
 }
 
 #projects {
