@@ -251,12 +251,13 @@ p {
 
 #skills .white-line {
   width: 2px;
-  height: auto;
+  height: 95%;
   background-color: white;
   grid-row: 2;
   grid-column: 5;
   display: flex;
   justify-self: center;
+  align-self: center;
 }
 
 .skills-icons {
@@ -404,38 +405,22 @@ p {
 #contact {
   scroll-snap-align: start;
   display: grid;
-  grid-template-rows: 1fr 0.6fr 0.3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 2.6fr 1fr;
 }
 
 #contact img {
-  transition: transform 0.3s ease;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 #contact img:hover {
-  transform: scale(1.05);
-}
-
-.gmail-link {
-  grid-row: 2;
-  grid-column: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.gmail-link img {
-  width: 25vh;
-}
-
-.gmail-link h2 {
-  font-size: 1.7vh;
+  transform: scale(1.03);
+  filter: none;
 }
 
 .social-links {
-  grid-row: 3;
+  grid-row: 2;
   grid-column: 2;
   display: flex;
   justify-content: center;
@@ -444,5 +429,12 @@ p {
 }
 
 .social-links img {
-  width: 6vh;
+  width: 12vh;
+}
+
+.linkedin-link > a > img {
+  width: 11vh;
+}
+
+@media (max-width: 1037px) {
 }
