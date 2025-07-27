@@ -1,0 +1,129 @@
+/* | Device Type        | Min–Max Widths | CSS Breakpoint Example       |
+| ------------------ | -------------- | ---------------------------- |
+| Mobile (portrait)  | 320–480px      | `@media (max-width: 480px)`  |
+| Mobile (landscape) | 480–768px      | `@media (max-width: 768px)`  |
+| Tablet             | 768–1024px     | `@media (max-width: 1024px)` |
+| Laptop             | 1024–1440px    | `@media (min-width: 1024px)` |
+| Desktop            | 1440–1920px+   | `@media (min-width: 1440px)` |
+ */
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  margin: 25px 25px;
+  background: #fffef5;
+  width: auto;
+  height: fit-content;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 6vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  font-family: "Bitter", serif;
+  color: #1E1E1E;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  font-family: "Montserrat", sans-serif;
+  color: #2A2A2A;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 600;
+  margin-bottom: 0.4em;
+  font-family: "Montserrat", sans-serif;
+  color: #3C3C3C;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1em;
+  max-width: 60ch;
+  font-family: "Montserrat", sans-serif;
+  color: #1E1E1E;
+}
+
+small {
+  font-size: 0.875rem;
+  font-family: "Montserrat", sans-serif;
+  color: #666;
+}
+
+header h1 {
+  margin: 0px;
+}
+
+header h2 {
+  margin: 0px;
+}
+
+header p {
+    margin: 10px 0px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+li svg {
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+li svg:hover {
+    opacity:0.9;
+}
+
+#virginia {
+    color:#222D4B;
+}
+
+.uva-centered > h3 {
+    margin:0px;
+    width: fit-content;
+}
+
+.uva-centered {
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+}
+
+.uva-centered > svg {
+    width: clamp(20px, 3vw, 35px);
+    height: clamp(20px, 3vw, 35px);
+}
+
+.card p {
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1440px) {
+}
