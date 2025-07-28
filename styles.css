@@ -121,7 +121,7 @@ h1 {
   font-weight: 700;
   margin-bottom: 0.5em;
   font-family: "Lora", serif;
-  color: #E57200;
+  color: #4bb3fd;
 }
 
 h2 {
@@ -130,24 +130,24 @@ h2 {
   margin-bottom: 0.5em;
   margin-top: 0;
   font-family: "Montserrat", sans-serif;
-  color: #2a2a2a;
+  color: #669bbc;
 }
 
 h3 {
-  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  font-size: clamp(1.2rem, 4vw, 1.4rem);
   font-weight: 600;
   margin-bottom: 1em;
   margin-top: 2em;
   font-family: "Montserrat", sans-serif;
-  color: #3c3c3c;
+  color: #669bbc;
 }
 
 h4 {
   font-size: clamp(1.1rem, 3vw, 1.2rem);
-  font-weight: 525;
+  font-weight: 450;
   margin-bottom: 0.4em;
   font-family: "Montserrat", sans-serif;
-  color: #3c3c3c;
+  color: #2a2a2a;
 }
 
 p {
@@ -156,7 +156,7 @@ p {
   margin-bottom: 1em;
   max-width: 60ch;
   font-family: "Montserrat", sans-serif;
-  color: #1e1e1e;
+  color: #2a2a2a;
 }
 
 small {
@@ -185,9 +185,11 @@ header p {
   gap: 15px;
 }
 
+/* github logo color change in html */
 .icon-links svg {
   width: 35px;
   height: 35px;
+  fill: #669bbc;
 }
 
 li svg {
@@ -271,6 +273,17 @@ li svg:hover {
   }
 }
 
+/* ANIMATIONS */
+@keyframes fade-up {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+/* MEDIA QUERIES */
 @media (min-width: 840px) {
   body {
     margin: 25px 40px;
@@ -283,7 +296,7 @@ li svg:hover {
     display: grid;
     grid-template-columns: 0.5fr 400px 500px 0.5fr;
     grid-template-rows: 1;
-    gap:30px;
+    gap: 30px;
   }
 
   .left-wrapper {
