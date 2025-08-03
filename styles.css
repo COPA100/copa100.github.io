@@ -273,13 +273,39 @@ li svg:hover {
   }
 }
 
+/* ANIMATION CLASSES */
+header {
+  opacity: 0;
+  animation: fade-up 0.8s ease-out forwards;
+}
+
+.icon-links {
+  opacity: 0;
+  animation: fade-up 0.8s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.built-with-desktop {
+  opacity: 0;
+  animation: fade-up 0.8s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.right-wrapper {
+  opacity: 0;
+  animation: fade-up 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
 /* ANIMATIONS */
 @keyframes fade-up {
   from {
-    transform: translateY(-10px);
+    transform: translateY(30px);
+    opacity: 0%;
   }
   to {
     transform: translateY(0px);
+    opacity: 100%;
   }
 }
 
